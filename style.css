@@ -1,0 +1,318 @@
+
+.logo {
+    height: 140px; 
+} 
+body, html {
+    padding-top: 80px;    /* Push the content below the fixed header */
+    margin: 0;
+    box-sizing: border-box;
+    /* display: flex; */
+} 
+header {
+  top: 0;               /* Stick to the top of the viewport */
+  left: 0;              /* Align to the left */
+  width: 99%;          /* Full width */
+  z-index: 100;        /* Ensure it stays above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background-color: #fff;
+  
+}
+
+/* Search Bar */
+
+
+/* Icons Section */
+.header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.header-icons a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-icons a:hover {
+    color: #007BFF;
+}
+
+.background{
+    height: 500px;
+    width: 1515; 
+}
+
+.nav-bar {
+  position: absolute; /* Change from fixed to absolute to fit the layout */
+  top: 15%; /* Adjust the positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Add space between items */
+  padding: 5px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.nav-bar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.nav-bar a:hover {
+  background-color: #ffebef;
+  color: #ff3366;
+}
+
+/* Active Link */
+.nav-bar .active {
+  background-color: #ffe6eb;
+  color: #ff3366;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar {
+      flex-wrap: wrap; /* Adjust navbar links to stack */
+      padding: 10px 20px;
+      gap: 15px;
+  }
+
+  .nav-bar a {
+      font-size: 14px; /* Smaller font size for mobile screens */
+      padding: 8px 15px;
+  }
+}
+/* Container for both forms */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;           /* Space between the forms */
+  margin: 50px auto;
+  max-width: 1000px;   /* Limit the width of the container */
+  padding: 20px;
+}
+
+/* Individual forms */
+form {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;         /* Ensures forms take equal space */
+  max-width: 450px;    /* Limit the width of each form */
+}
+
+/* Headings */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: darkgrey;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Submit and reset buttons */
+input[type="submit"],
+input[type="reset"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+  background-color: #ff1493;
+}
+
+/* Reset button styling */
+input[type="reset"] {
+  background-color: #000;
+  color: white;
+}
+
+/* Links inside the form */
+a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .form-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.filter-container {
+  width: 15%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
+}
+
+.filter-container h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-section input[type="range"] {
+  width: 50%;
+}
+
+.filter-section div {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff5252;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e04848;
+}
+
+.product-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.product img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+}
+
+.product h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.product a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff5252;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product a:hover {
+  background-color: #e04848;
+}
+
+.product .wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+}
+
+.product .wishlist-icon:hover {
+  color: #ff5252;
+}
